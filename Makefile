@@ -36,3 +36,5 @@ ci: clean check test
 show:
 	@echo "SOURCES = $(SOURCES)"
 	@echo "OUTPUTS = $(OUTPUTS)"
+count: build ## report how many words were built
+	@wc -w $(OUTPUTS) | tail -1
